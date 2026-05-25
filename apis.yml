@@ -1,0 +1,143 @@
+aid: deepeval
+name: DeepEval
+description: >-
+  DeepEval is an open-source LLM evaluation framework — built and maintained by
+  Confident AI — for testing and benchmarking large language model
+  applications. It is structured like Pytest but specialized for LLM systems,
+  providing 40+ research-backed metrics (G-Eval, DAG, RAG metrics, agent
+  metrics, multi-turn conversation metrics, multimodal metrics, MCP metrics,
+  hallucination, bias, toxicity, summarization, JSON correctness) that run
+  locally against any LLM provider (OpenAI, Anthropic, Gemini, Bedrock, Vertex
+  AI, Ollama, OpenRouter, vLLM, LM Studio, LiteLLM, Azure OpenAI, DeepSeek,
+  Grok, Moonshot, Portkey). DeepEval supports end-to-end and component-level
+  evaluation via the `@observe()` decorator, synthetic dataset generation,
+  multi-turn conversation simulation, CI/CD integration, automatic prompt
+  optimization, and one-line LLM benchmarking (MMLU, HellaSwag, DROP,
+  BIG-Bench Hard, TruthfulQA, HumanEval, GSM8K). DeepEval ships as the
+  `deepeval` Python package on PyPI together with a `deepeval` command-line
+  tool. The framework integrates natively with pytest, LangChain, LangGraph,
+  LlamaIndex, OpenAI Agents, CrewAI, Pydantic AI, AWS AgentCore, Google ADK,
+  and Strands. DeepEval is open source under Apache 2.0 and is the engine that
+  powers Confident AI's commercial LLM evaluation, observability, and
+  red-teaming platform; `deepeval login` connects local test runs to the
+  Confident AI cloud for shared regression reports, dataset management,
+  production tracing, and prompt versioning. A sibling open-source framework,
+  DeepTeam (`deepteam`), targets adversarial / red-team testing of LLM apps.
+type: Index
+position: Provider
+access: Open-Source
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - LLM Evaluation
+  - LLM Testing
+  - Evaluation Framework
+  - Evaluation Metrics
+  - LLM Observability
+  - LLM as a Judge
+  - G-Eval
+  - RAG Evaluation
+  - Agent Evaluation
+  - Hallucination Detection
+  - Bias Detection
+  - Toxicity Detection
+  - Red Teaming
+  - Benchmarks
+  - MMLU
+  - Synthetic Data Generation
+  - Prompt Optimization
+  - CI CD
+  - Pytest
+  - Python
+  - Open Source
+  - Apache 2.0
+  - MCP
+url: https://raw.githubusercontent.com/api-evangelist/deepeval/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis: []
+common:
+  - type: Website
+    url: https://www.confident-ai.com
+  - type: Portal
+    url: https://deepeval.com
+  - type: Documentation
+    url: https://deepeval.com/docs/getting-started
+  - type: GettingStarted
+    url: https://deepeval.com/docs/getting-started
+  - type: Repository
+    url: https://github.com/confident-ai/deepeval
+  - type: GitHubOrganization
+    url: https://github.com/confident-ai
+  - type: SourceCode
+    url: https://github.com/confident-ai/deepeval
+  - type: Package
+    url: https://pypi.org/project/deepeval/
+  - type: License
+    url: https://github.com/confident-ai/deepeval/blob/main/LICENSE.md
+  - type: Issues
+    url: https://github.com/confident-ai/deepeval/issues
+  - type: Releases
+    url: https://github.com/confident-ai/deepeval/releases
+  - type: ChangeLog
+    url: https://github.com/confident-ai/deepeval/releases
+  - type: Contributing
+    url: https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md
+  - type: Blog
+    url: https://www.confident-ai.com/blog
+  - type: Forum
+    url: https://discord.com/invite/3SEyvpgu2f
+  - type: Pricing
+    url: https://www.confident-ai.com/pricing
+  - type: SignUp
+    url: https://app.confident-ai.com/auth/signup
+  - type: Login
+    url: https://app.confident-ai.com/auth/login
+  - type: Application
+    url: https://app.confident-ai.com
+  - type: Careers
+    url: https://www.confident-ai.com/careers
+  - type: TermsOfService
+    url: https://www.confident-ai.com/terms
+  - type: PrivacyPolicy
+    url: https://www.confident-ai.com/privacy
+  - type: Twitter
+    url: https://twitter.com/confident_ai
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/confident-ai
+  - type: YouTube
+    url: https://www.youtube.com/@confident-ai
+  - type: SDK
+    url: https://github.com/confident-ai/deepeval
+    name: deepeval (Python)
+  - type: CLI
+    url: https://deepeval.com/docs/getting-started
+    name: deepeval CLI
+  - type: Tool
+    url: https://github.com/confident-ai/deepteam
+    name: DeepTeam — LLM red teaming framework
+  - type: Tool
+    url: https://github.com/confident-ai/confident-mcp-server
+    name: Confident MCP Server
+  - type: Product
+    url: https://www.confident-ai.com/products/llm-evaluation
+    name: Confident AI — LLM Evaluation
+  - type: Product
+    url: https://www.confident-ai.com/products/llm-observability
+    name: Confident AI — LLM Observability
+  - type: Product
+    url: https://www.confident-ai.com/products/ai-red-teaming
+    name: Confident AI — AI Red Teaming
+  - type: Documentation
+    url: https://trydeepteam.com
+    name: DeepTeam Documentation
+  - type: CodeExamples
+    url: https://github.com/confident-ai/blog-examples
+    name: Confident AI blog examples
+  - type: Integrations
+    url: https://deepeval.com/integrations/models/openai
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    X: apievangelist
+    url: https://apievangelist.com
