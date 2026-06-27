@@ -2,11 +2,11 @@
   "repo": "deepeval",
   "feeds": [
     {
-      "source": "https://www.confident-ai.com/blog",
-      "feed_url": "https://www.confident-ai.com/blog",
+      "source": "https://www.confident-ai.com/feed.xml",
+      "feed_url": "https://www.confident-ai.com/feed.xml",
       "title": "",
-      "saved": 0,
-      "method": "none"
+      "saved": 6,
+      "method": "feed"
     },
     {
       "source": "https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md",
@@ -16,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 6,
+  "fetched": "2026-06-27T12:03:07Z"
 }

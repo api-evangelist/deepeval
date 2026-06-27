@@ -77,7 +77,7 @@ common:
     url: https://github.com/confident-ai/deepeval/blob/main/LICENSE.md
   - type: Issues
     url: https://github.com/confident-ai/deepeval/issues
-  - type: Releases
+  - type: ReleaseNotes
     url: https://github.com/confident-ai/deepeval/releases
   - type: ChangeLog
     url: https://github.com/confident-ai/deepeval/releases
@@ -85,11 +85,11 @@ common:
     url: https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md
   - type: Blog
     url: https://www.confident-ai.com/blog
-  - type: Forum
+  - type: Forums
     url: https://discord.com/invite/3SEyvpgu2f
   - type: Pricing
     url: https://www.confident-ai.com/pricing
-  - type: SignUp
+  - type: Signup
     url: https://app.confident-ai.com/auth/signup
   - type: Login
     url: https://app.confident-ai.com/auth/login
@@ -107,16 +107,16 @@ common:
     url: https://www.linkedin.com/company/confident-ai
   - type: YouTube
     url: https://www.youtube.com/@confident-ai
-  - type: SDK
+  - type: SDKs
     url: https://github.com/confident-ai/deepeval
     name: deepeval (Python)
   - type: CLI
     url: https://deepeval.com/docs/getting-started
     name: deepeval CLI
-  - type: Tool
+  - type: Tools
     url: https://github.com/confident-ai/deepteam
     name: DeepTeam — LLM red teaming framework
-  - type: Tool
+  - type: Tools
     url: https://github.com/confident-ai/confident-mcp-server
     name: Confident MCP Server
   - type: Product
