@@ -57,6 +57,8 @@ modified: '2026-05-25'
 specificationVersion: '0.20'
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/deepeval-domain-security.yml
   - type: Website
     url: https://www.confident-ai.com
   - type: Portal
