@@ -56,6 +56,30 @@ tags:
   - MMLU
   - Synthetic Data Generation
   - Prompt Optimization
+  - CI/CD
+  - Pytest
+  - Python
+  - Open-Source
+  - Apache 2.0
+  - MCP
+tags_raw:
+  - LLM Evaluation
+  - LLM Testing
+  - Evaluation Framework
+  - Evaluation Metrics
+  - LLM Observability
+  - LLM as a Judge
+  - G-Eval
+  - RAG Evaluation
+  - Agent Evaluation
+  - Hallucination Detection
+  - Bias Detection
+  - Toxicity Detection
+  - Red Teaming
+  - Benchmarks
+  - MMLU
+  - Synthetic Data Generation
+  - Prompt Optimization
   - CI CD
   - Pytest
   - Python
