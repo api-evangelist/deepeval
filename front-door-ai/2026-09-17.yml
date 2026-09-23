@@ -1,0 +1,33 @@
+# Front Door AI Index — deepeval — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: deepeval
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.confident-ai.com
+  final_host: www.confident-ai.com
+  ownership: shared
+  owner: confident-ai
+  shares_host_with:
+  - confident-ai
+  inherited_from: null
+  verdict: scored
+  score: null
+  host_score: 93
+  density: null
+  words: 1715
+  tiers:
+    agentic: 17
+    core: 75
+    model: 1
+  ambiguous: 14
+  top_terms:
+    AI: 61
+    LLMs: 14
+    agent: 14
+    prompts: 12
+    agentic: 2
+    chatbot: 2
+    OpenAI: 1
+    fine-tune: 1
