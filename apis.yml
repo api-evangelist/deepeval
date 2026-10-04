@@ -25,16 +25,21 @@ description: >-
   DeepTeam (`deepteam`), targets adversarial / red-team testing of LLM apps.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: open-core
+  license: Apache-2.0
+  license_evidence:
+    repo: confident-ai/deepeval
+    spdx: Apache-2.0
+    stars: 18440
+  open_source: true
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: medium
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -71,7 +76,7 @@ tags:
   - CI/CD
   - Pytest
   - Python
-  - Open-Source
+  - Open Source
   - Apache 2.0
   - MCP
 tags_raw:
@@ -98,6 +103,7 @@ tags_raw:
   - Open Source
   - Apache 2.0
   - MCP
+  - Open-Source
 url: https://raw.githubusercontent.com/api-evangelist/deepeval/refs/heads/main/apis.yml
 created: '2026-05-25'
 modified: '2026-05-25'
