@@ -1,4 +1,4 @@
-# DeepEval (deepeval)
+# DeepEval
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,152 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-DeepEval is an open-source LLM evaluation framework — built and maintained by Confident AI — for testing and benchmarking large language model applications. It is structured like Pytest but specialized for LLM systems, providing 40+ research-backed metrics that run locally against any LLM provider. DeepEval ships as the `deepeval` Python package on PyPI together with a `deepeval` command-line tool, integrates natively with pytest, LangChain, LangGraph, LlamaIndex, OpenAI Agents, CrewAI, Pydantic AI, AWS AgentCore, Google ADK, and Strands, and powers Confident AI's commercial evaluation, observability, and red-teaming platform.
+DeepEval is an open-source LLM evaluation framework — built and maintained by Confident AI — for testing and benchmarking large language model applications. It is structured like Pytest but specialized for LLM systems, providing 40+ research-backed metrics (G-Eval, DAG, RAG metrics, agent metrics, multi-turn conversation metrics, multimodal metrics, MCP metrics, hallucination, bias, toxicity, summarization, JSON correctness) that run locally against any LLM provider (OpenAI, Anthropic, Gemini, Bedrock, Vertex AI, Ollama, OpenRouter, vLLM, LM Studio, LiteLLM, Azure OpenAI, DeepSeek, Grok, Moonshot, Portkey). DeepEval supports end-to-end and component-level evaluation via the `@observe()` decorator, synthetic dataset generation, multi-turn conversation simulation, CI/CD integration, automatic prompt optimization, and one-line LLM benchmarking (MMLU, HellaSwag, DROP, BIG-Bench Hard, TruthfulQA, HumanEval, GSM8K). DeepEval ships as the `deepeval` Python package on PyPI together with a `deepeval` command-line tool. The framework integrates natively with pytest, LangChain, LangGraph, LlamaIndex, OpenAI Agents, CrewAI, Pydantic AI, AWS AgentCore, Google ADK, and Strands. DeepEval is open source under Apache 2.0 and is the engine that powers Confident AI's commercial LLM evaluation, observability, and red-teaming platform; `deepeval login` connects local test runs to the Confident AI cloud for shared regression reports, dataset management, production tracing, and prompt versioning. A sibling open-source framework, DeepTeam (`deepteam`), targets adversarial / red-team testing of LLM apps.
 
-**URL:** [Visit APIs.json](https://raw.githubusercontent.com/api-evangelist/deepeval/refs/heads/main/apis.yml)
+**Areas:** LLM Evaluation · LLM Testing · Evaluation Framework · Evaluation Metrics · LLM Observability · LLM as a Judge · G-Eval · RAG Evaluation · Agent Evaluation · Hallucination Detection · Bias Detection · Toxicity Detection
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=opensource-api-evangelist&utm_content=repo)
+## DeepEval on APIs.io
 
-## Tags
+Everything profiled for DeepEval is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/deepeval/](https://apis.io/providers/deepeval/)** — or go straight to one of the APIs or properties below.
 
-LLM Evaluation, LLM Testing, Evaluation Framework, Evaluation Metrics, LLM Observability, LLM as a Judge, G-Eval, RAG Evaluation, Agent Evaluation, Hallucination Detection, Bias Detection, Toxicity Detection, Red Teaming, Benchmarks, MMLU, Synthetic Data Generation, Prompt Optimization, CI/CD, Pytest, Python, Open Source, Apache 2.0, MCP
+### Published properties
 
-## Timestamps
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+#### Security (1)
 
-## Project Snapshot
+Authentication, trust centre, and vulnerability disclosure.
 
-| Field | Value |
-|---|---|
-| Project | [confident-ai/deepeval](https://github.com/confident-ai/deepeval) |
-| Maintainer | [Confident AI](https://www.confident-ai.com) |
-| License | Apache-2.0 |
-| Language | Python |
-| Latest release | v4.0.3 (May 21, 2026) |
-| Install | `pip install -U deepeval` |
-| GitHub stars | 15,600+ |
-| Sibling project | [confident-ai/deepteam](https://github.com/confident-ai/deepteam) — LLM red teaming framework |
+- [Deepeval Domain Security](https://apis.io/security/deepeval/deepeval-domain-security/)
 
-## Install & Quickstart
+## Where to find this API
 
-```bash
-pip install -U deepeval
-# Optional: connect local test runs to Confident AI cloud
-deepeval login
-# Run a deepeval test suite (pytest under the hood)
-deepeval test run test_example.py
-```
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-```python
-from deepeval import assert_test
-from deepeval.metrics import GEval
-from deepeval.test_case import LLMTestCase, SingleTurnParams
-
-def test_correctness():
-    metric = GEval(
-        name="Correctness",
-        criteria="Determine if output is correct based on expected output.",
-        evaluation_params=[SingleTurnParams.ACTUAL_OUTPUT, SingleTurnParams.EXPECTED_OUTPUT],
-        threshold=0.5,
-    )
-    case = LLMTestCase(
-        input="What if these shoes don't fit?",
-        actual_output="You have 30 days for a full refund.",
-        expected_output="30-day full refund available.",
-        retrieval_context=["All customers eligible for 30 day refund."],
-    )
-    assert_test(case, [metric])
-```
-
-## Metrics
-
-**General / Custom**
-
-- G-Eval — research-backed LLM-as-a-judge for arbitrary criteria
-- DAG — graph-based deterministic metric builder
-
-**Agentic**
-
-- Task Completion, Tool Correctness, Goal Accuracy, Step Efficiency, Plan Adherence, Plan Quality, Tool Use, Argument Correctness
-
-**RAG**
-
-- Answer Relevancy, Faithfulness, Contextual Recall, Contextual Precision, Contextual Relevancy, RAGAS
-
-**Multi-Turn / Conversational**
-
-- Knowledge Retention, Conversation Completeness, Turn Relevancy, Turn Faithfulness, Role Adherence
-
-**MCP**
-
-- Task Completion (MCP), MCP Use, Multi-Turn MCP Use
-
-**Multimodal**
-
-- Text to Image, Image Editing, Image Coherence, Image Helpfulness, Image Reference
-
-**Safety / Quality**
-
-- Hallucination, Summarization, Bias, Toxicity, JSON Correctness, Prompt Alignment
-
-## Benchmarks
-
-One-line benchmarking against MMLU, HellaSwag, DROP, BIG-Bench Hard, TruthfulQA, HumanEval, GSM8K.
-
-## Evaluation Model Providers
-
-OpenAI, Azure OpenAI, Anthropic, Gemini, Amazon Bedrock, Vertex AI, DeepSeek, Grok, Moonshot, OpenRouter, Ollama, vLLM, LM Studio, LiteLLM, Portkey.
-
-## Framework Integrations
-
-OpenAI Agents, LangChain, LangGraph, LlamaIndex, CrewAI, Pydantic AI, Anthropic, AWS AgentCore, Google ADK, Strands.
-
-## Confident AI Platform
-
-`deepeval login` connects local runs to the Confident AI cloud for shared regression reports, dataset annotation, production tracing, prompt versioning, multi-turn simulations, real-time alerting, AI risk assessments (OWASP Top 10 for Agentic Applications), and human-in-the-loop feedback.
-
-| Tier | Price | Notes |
-|---|---|---|
-| Free | $0 forever | 2 seats, 1 project, 5 test runs/week, 1 GB-month traces |
-| Starter | from $19.99 / user / mo | Full unit + regression testing, custom metrics, dataset annotation, HITL |
-| Premium | from $49.99 / user / mo | Chat simulations, no-code workflows, pre-commit evals, full API access |
-| Team | Custom | Git-based prompt workflows, dataset versioning, SSO, HIPAA / SOC 2 |
-| Enterprise | Custom | Dedicated on-prem, 24/7 support, penetration testing |
-
-## Common Properties
-
-- [Website — confident-ai.com](https://www.confident-ai.com)
-- [Portal — deepeval.com](https://deepeval.com)
-- [Documentation — Getting Started](https://deepeval.com/docs/getting-started)
-- [Repository — confident-ai/deepeval](https://github.com/confident-ai/deepeval)
-- [GitHubOrganization — confident-ai](https://github.com/confident-ai)
-- [Package — PyPI](https://pypi.org/project/deepeval/)
-- [License — Apache-2.0](https://github.com/confident-ai/deepeval/blob/main/LICENSE.md)
-- [Issues](https://github.com/confident-ai/deepeval/issues)
-- [Releases / ChangeLog](https://github.com/confident-ai/deepeval/releases)
-- [Contributing](https://github.com/confident-ai/deepeval/blob/main/CONTRIBUTING.md)
-- [Blog](https://www.confident-ai.com/blog)
-- [Forum — Discord](https://discord.com/invite/3SEyvpgu2f)
+- [Website](https://www.confident-ai.com)
+- [Documentation](https://deepeval.com/docs/getting-started)
+- [Getting started](https://deepeval.com/docs/getting-started)
 - [Pricing](https://www.confident-ai.com/pricing)
-- [SignUp](https://app.confident-ai.com/auth/signup)
-- [Application — Confident AI cloud](https://app.confident-ai.com)
-- [Tool — DeepTeam (red teaming)](https://github.com/confident-ai/deepteam)
-- [Tool — Confident MCP Server](https://github.com/confident-ai/confident-mcp-server)
-- [Documentation — DeepTeam](https://trydeepteam.com)
-- [CodeExamples — blog-examples](https://github.com/confident-ai/blog-examples)
-- [Integrations — models](https://deepeval.com/integrations/models/openai)
-- [Twitter](https://twitter.com/confident_ai)
-- [LinkedIn](https://www.linkedin.com/company/confident-ai)
-- [YouTube](https://www.youtube.com/@confident-ai)
+- [Changelog](https://github.com/confident-ai/deepeval/releases)
+- [Blog](https://www.confident-ai.com/blog)
+- [Terms of service](https://www.confident-ai.com/terms)
+- [Privacy policy](https://www.confident-ai.com/privacy)
+- [GitHub](https://github.com/confident-ai)
 
-## APIs
+## API Evangelist rating
 
-DeepEval is a Python framework and CLI — there is no public REST API surface for the framework itself. The framework runs evaluations locally and (optionally) syncs results to the Confident AI cloud. Confident AI advertises full API access on Premium and above, but no public OpenAPI specification or developer reference is published at this time. As a result this catalog entry does not include any OpenAPI artifacts.
+**Kin Score 24.0** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 6.5 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 27.6 |
 
-**FN:** Kin Lane
+**Agent readiness 1.3** — human-only
 
-**Email:** info@apievangelist.com
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 9.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/deepeval/](https://apis.io/providers/deepeval/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DeepEval: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/deepeval/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
